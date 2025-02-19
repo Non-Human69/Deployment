@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BeheerController;
+use App\Http\Controllers\VoorraadsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,6 +20,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('beheers', BeheerController::class);
+Route::resource('voorraads', VoorraadsController::class);
 
 
 require __DIR__.'/auth.php';
