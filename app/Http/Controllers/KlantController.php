@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Voorraads;
+use App\Models\Klant;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreKlantRequest;
+use App\Http\Requests\UpdateKlantRequest;
 
-class VoorraadsController extends Controller
+class KlantController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $voorraads = Voorraads::all();
-        return view('voorraads.index', compact('voorraads'));
+        //
     }
 
     /**
@@ -28,7 +28,7 @@ class VoorraadsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreKlantRequest $request)
     {
         //
     }
@@ -36,7 +36,7 @@ class VoorraadsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Voorraads $voorraads)
+    public function show(Klant $klant)
     {
         //
     }
@@ -44,7 +44,7 @@ class VoorraadsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Voorraads $voorraads)
+    public function edit(Klant $klant)
     {
         //
     }
@@ -52,7 +52,7 @@ class VoorraadsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Voorraads $voorraads)
+    public function update(UpdateKlantRequest $request, Klant $klant)
     {
         //
     }
@@ -60,7 +60,7 @@ class VoorraadsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Voorraads $voorraads)
+    public function destroy(Klant $klant)
     {
         //
     }

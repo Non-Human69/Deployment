@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\nullComp;
+use App\Models\Leverancier;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StorenullCompRequest;
-use App\Http\Requests\UpdatenullCompRequest;
+use App\Http\Requests\StoreLeverancierRequest;
+use App\Http\Requests\UpdateLeverancierRequest;
 
-class NullCompController extends Controller
+class LeverancierController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +28,7 @@ class NullCompController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorenullCompRequest $request)
+    public function store(StoreLeverancierRequest $request)
     {
         //
     }
@@ -36,7 +36,7 @@ class NullCompController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(nullComp $nullComp)
+    public function show(Leverancier $leverancier)
     {
         //
     }
@@ -44,7 +44,7 @@ class NullCompController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(nullComp $nullComp)
+    public function edit(Leverancier $leverancier)
     {
         //
     }
@@ -52,7 +52,7 @@ class NullCompController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatenullCompRequest $request, nullComp $nullComp)
+    public function update(UpdateLeverancierRequest $request, Leverancier $leverancier)
     {
         //
     }
@@ -60,7 +60,7 @@ class NullCompController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(nullComp $nullComp)
+    public function destroy(Leverancier $leverancier)
     {
         //
     }

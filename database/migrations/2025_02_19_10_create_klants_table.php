@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('null_comps', function (Blueprint $table) {
+        Schema::create('klants', function (Blueprint $table) {
             $table->id();
+            $table->string('naam');
+            $table->string('email');
+            $table->string('telefoonnummer');
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('null_comps');
+        Schema::dropIfExists('klants');
     }
 };

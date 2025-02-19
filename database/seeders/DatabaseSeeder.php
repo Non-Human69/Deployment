@@ -19,5 +19,17 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // call all seeders {BestellingSeeder, BestellingsregelSeeder, ContactperSeeder, KlantSeeder, LeverancierSeeder, ProductSeeder, VerkoopregelSeeder, VerkoopSeeder} in the right order so no foreighn errors occur
+        $this->call([
+            BestellingSeeder::class,
+            BestellingsregelSeeder::class,
+            ContactperSeeder::class,
+            KlantSeeder::class,
+            LeverancierSeeder::class,
+            ProductSeeder::class,
+            VerkoopregelSeeder::class,
+            VerkoopSeeder::class,
+        ]);
     }
 }
