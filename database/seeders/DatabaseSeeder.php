@@ -22,14 +22,14 @@ class DatabaseSeeder extends Seeder
 
         // call all seeders {BestellingSeeder, BestellingsregelSeeder, ContactperSeeder, KlantSeeder, LeverancierSeeder, ProductSeeder, VerkoopregelSeeder, VerkoopSeeder} in the right order so no foreighn errors occur
         $this->call([
-            BestellingSeeder::class,
-            BestellingsregelSeeder::class,
             ContactperSeeder::class,
-            KlantSeeder::class,
             LeverancierSeeder::class,
+            BestellingSeeder::class,
             ProductSeeder::class,
-            VerkoopregelSeeder::class,
+            BestellingsregelSeeder::class,
+            KlantSeeder::class,
             VerkoopSeeder::class,
+            VerkoopregelSeeder::class,
         ]);
     }
 }
