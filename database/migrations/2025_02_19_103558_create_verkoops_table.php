@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('verkoops', function (Blueprint $table) {
             $table->id();
             $table->date('datum');
-            $table->foreignId('klant_id')->constrained('klanten', 'id');
+            $table->foreignId('klant_id')->constrained('klants', 'id');
             $table->timestamps();
         });
     }
