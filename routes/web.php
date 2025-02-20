@@ -29,14 +29,14 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('beheers', BeheerController::class);
 
-/*Route::resource('leverancier', leverancierController::class);
-Route::recource('bestelling', BestellingController::class);
-Route::recource('product', ProductController::class);
-Route::recource('bestellingsregel', BestellingsregelController::class);
-Route::recource('verkoop', VerkoopController::class);
-Route::recource('verkoopregel', VerkoopregelController::class);
-Route::recource('contactper', ContactperController::class);
-Route::recource('klant', KlantController::class);*/
+Route::resource('leverancier', leverancierController::class);
+Route::resource('bestelling', BestellingController::class);
+Route::resource('product', ProductController::class);
+Route::resource('bestellingsregel', BestellingsregelController::class);
+Route::resource('verkoop', VerkoopController::class);
+Route::resource('verkoopregel', VerkoopregelController::class);
+Route::resource('contactper', ContactperController::class);
+Route::resource('klant', KlantController::class);
 
 
 require __DIR__.'/auth.php';

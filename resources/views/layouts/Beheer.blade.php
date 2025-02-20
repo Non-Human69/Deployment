@@ -21,7 +21,7 @@
                 <nav>
                     <ul>
                         <li class="mb-2"><a href="{{ route('beheers.index') }}" class="block p-2 hover:bg-gray-700 rounded">Hoofdmenu</a></li>
-                        <li class="mb-2"><a href="{{ route('voorraads.index') }}" class="block p-2 hover:bg-gray-700 rounded">Voorraad</a></li>
+                        <li class="mb-2"><a href="{{ route('product.index') }}" class="block p-2 hover:bg-gray-700 rounded">Voorraad</a></li>
                         <li class="mb-2"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Settings</a></li>
                         <li class="mb-2"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Reports</a></li>
                     </ul>
