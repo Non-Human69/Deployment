@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('beheers', BeheerController::class);
+Route::get('/map', [BeheerController::class, 'map'])->name('beheers.map');
 
 Route::resource('leverancier', leverancierController::class);
 Route::resource('bestelling', BestellingController::class);

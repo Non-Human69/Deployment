@@ -64,4 +64,9 @@ class BeheerController extends Controller
     {
         //
     }
+
+    public function map()
+    {
+        return view('beheers.map');
+    }
 }
