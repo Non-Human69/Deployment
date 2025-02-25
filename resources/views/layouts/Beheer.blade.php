@@ -26,6 +26,7 @@
                         <li class="mb-2"><a href="{{ route('product.index') }}" class="block p-2 hover:bg-gray-700 rounded">Voorraad</a></li>
                         <li class="mb-2"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Settings</a></li>
                         <li class="mb-2"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Reports</a></li>
+                        <li class="mb-2"><a href="{{ route('beheers.map') }}" class="block p-2 hover:bg-gray-700 rounded">Plattegrond</a></li>
                     </ul>
                 </nav>
             </aside>
