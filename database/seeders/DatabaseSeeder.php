@@ -15,10 +15,10 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+//        User::factory()->create([
+//            'name' => 'Test User',
+//            'email' => 'test@example.com',
+//        ]);
 
         // call all seeders {BestellingSeeder, BestellingsregelSeeder, ContactperSeeder, KlantSeeder, LeverancierSeeder, ProductSeeder, VerkoopregelSeeder, VerkoopSeeder} in the right order so no foreighn errors occur
         $this->call([
