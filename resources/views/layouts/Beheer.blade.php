@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Management System</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('js/menu.js') }}" rel="Scripts">
 </head>
 
 <body class="bg-gray-100">
@@ -17,7 +19,7 @@
             </div>
         </header>
         <div class="flex flex-1">
-            <aside class="bg-gray-800 text-white w-64 p-4">
+            <aside class="sidebar bg-gray-800 text-white w-64 p-4">
                 <nav>
                     <ul>
                         <li class="mb-2"><a href="{{ route('beheers.index') }}" class="block p-2 hover:bg-gray-700 rounded">Hoofdmenu</a></li>

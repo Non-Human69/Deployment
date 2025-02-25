@@ -1,0 +1,67 @@
+/* Default: Sidebar visible */
+.sidebar {
+    width: 16rem; /* 64px */
+    transition: transform 0.3s ease-in-out;
+}
+.header__toggleNav {
+    background: #e35048;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+
+    /* Hide sidebar when screen width is <= 1050px */
+    @media (max-width: 1050px) {
+        .sidebar {
+            transform: translateX(-100%);
+            position: absolute;
+            width: 16rem;
+            height: 100vh;
+            background-color: #1F2937; /* Gray-800 */
+            z-index: 50;
+        }
+
+        /* Show the toggle button */
+        .menu-toggle {
+            display: block;
+        }
+
+        .menu-toggle {
+            display: none;
+            background-color: #1F2937; /* Gray-800 */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .header__toggleNav .lineOne {
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            left: 18px;
+            top: 20px;
+            transition: transform .15s .15s, -webkit-transform .15s .15s, top .15s .15s;
+            -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+            transform: rotate(0);
+        }
+
+        .header__toggleNav .lineTwo {
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            left: 18px;
+            top: 35px;
+            transition: transform .15s .15s, -webkit-transform .15s .15s, top .15s .15s;
+            -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+            transform: rotate(0);
+        }
+    }
+}
