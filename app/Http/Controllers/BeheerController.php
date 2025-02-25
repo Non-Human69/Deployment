@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Beheer;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class BeheerController extends Controller
@@ -67,6 +68,7 @@ class BeheerController extends Controller
 
     public function map()
     {
-        return view('beheers.map');
+        $products = product::all();
+        return view('beheers.map', compact('products'));
     }
 }
