@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Management System</title>
+    <title>Beheer systeem</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -16,7 +16,7 @@
     <div class="min-h-screen flex flex-col">
         <header class="bg-green-500 text-white p-4">
             <div class="container mx-auto">
-                <h1 class="text-3xl font-bold">Management System</h1>
+                <h1 class="text-3xl font-bold">Beheer systeem</h1>
             </div>
         </header>
         <div class="flex flex-1">
@@ -41,7 +41,7 @@
         </div>
         <footer class="bg-gray-800 text-white p-4">
             <div class="container mx-auto text-center">
-                &copy; 2023 Management System. All rights reserved.
+                &copy; 2025 Beheer systeem. All rights reserved.
             </div>
         </footer>
     </div>
