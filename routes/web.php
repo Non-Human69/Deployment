@@ -30,6 +30,9 @@ Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.s
 Route::resource('beheers', BeheerController::class);
 Route::get('/map', [BeheerController::class, 'map'])->name('beheers.map');
 
+Route::resource('products', ProductController::class);
+
+Route::resource('products', ProductController::class);
 Route::resource('leverancier', leverancierController::class);
 Route::resource('bestelling', BestellingController::class);
 Route::resource('product', ProductController::class);

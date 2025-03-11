@@ -14,20 +14,22 @@
 
 <body class="bg-gray-100">
     <div class="min-h-screen flex flex-col">
-        <header class="bg-blue-600 text-white p-4">
+        <header class="bg-green-500 text-white p-4">
             <div class="container mx-auto">
                 <h1 class="text-3xl font-bold">Management System</h1>
             </div>
         </header>
         <div class="flex flex-1">
-            <aside class="sidebar bg-gray-800 text-white w-64 p-4">
+            <aside class="sidebar bg-gray-800 text-white w-64 p-2">
+            <img src="{{ asset('pictures/Logo.png') }}" alt="Logo" class="">
                 <nav>
                     <ul>
                         <li class="mb-2"><a href="{{ route('beheers.index') }}" class="block p-2 hover:bg-gray-700 rounded">Hoofdmenu <i class="fa-thin fa-house"></i></a></li>
                         <li class="mb-2"><a href="{{ route('product.index') }}" class="block p-2 hover:bg-gray-700 rounded">Voorraad</a></li>
-                        <li class="mb-2"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Settings</a></li>
-                        <li class="mb-2"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Reports</a></li>
+                        <li class="mb-2"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Statistieken</a></li>
                         <li class="mb-2"><a href="{{ route('beheers.map') }}" class="block p-2 hover:bg-gray-700 rounded">Plattegrond</a></li>
+                        <li class="mb-2"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Instellingen</a></li>
+                        <li class="mb-2"><a href="{{ route('profile.edit') }}" class="block p-2 hover:bg-gray-700 rounded">Account</a></li>
                     </ul>
                 </nav>
             </aside>
