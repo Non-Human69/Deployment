@@ -62,7 +62,7 @@
     document.getElementById('locationButton').addEventListener('click', function() {
         const mapPin = document.getElementById('mapPin');
         if (mapPin.classList.contains('hidden')) {
-            mapPin.style.top = '68%'; // Adjust the position as needed
+            mapPin.style.top = '85%'; // Adjust the position as needed
             mapPin.style.left = '68%'; // Adjust the position as needed
             mapPin.classList.remove('hidden');
         } else {
