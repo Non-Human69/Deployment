@@ -50,6 +50,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[OP.GG](https://op.gg)**
 
 ## Contributing
+![image](https://github.com/user-attachments/assets/7199e445-48be-4677-91f5-32f66df776f8)
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
