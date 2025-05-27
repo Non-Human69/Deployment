@@ -43,4 +43,4 @@ Route::resource('contactper', ContactperController::class);
 Route::resource('klant', KlantController::class);
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

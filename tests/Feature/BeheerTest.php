@@ -11,9 +11,9 @@ class BeheerTest extends TestCase
     /**
      * A basic feature test example.
      */
-    public function test_example(): void
+    public function testBeheersExists(): void
     {
-        $response = $this->get('/');
+        $response = $this->get('/beheers');
 
         $response->assertStatus(200);
     }

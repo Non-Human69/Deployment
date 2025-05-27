@@ -5,10 +5,10 @@
     use Illuminate\View\Component;
     use Illuminate\View\View;
 
-    class BeheerLayout extends Component
+class BeheerLayout extends Component
+{
+    public function render(): View
     {
-        public function render(): View
-        {
-            return view('layouts.Beheer');
-        }
+        return view('layouts.Beheer');
     }
+}
