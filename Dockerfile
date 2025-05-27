@@ -16,7 +16,6 @@ RUN php artisan config:cache && \
     php artisan view:cache
 
 
-
 EXPOSE 9000
 
 CMD ["php-fpm"]
