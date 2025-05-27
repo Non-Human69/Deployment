@@ -38,7 +38,7 @@ jobs:
     - name: Docker login
       run: docker login
     - name: Build Docker image
-      run: docker build -t illunatie/laravel-app:latest
+      run: docker build -t illunatie/laravel-app:latest .
     - name: Push image to Docker Hub
       run: docker push illunatie/laravel-app:latest
 
