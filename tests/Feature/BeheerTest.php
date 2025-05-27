@@ -13,7 +13,7 @@ class BeheerTest extends TestCase
      */
     public function testBeheersExists(): void
     {
-        $response = $this->get('/beheers');
+        $response = $this->get('/');
 
         $response->assertStatus(200);
     }

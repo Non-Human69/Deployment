@@ -13,7 +13,7 @@ class VoorraadsTest extends TestCase
      */
     public function testProductExists(): void
     {
-        $response = $this->get('/product');
+        $response = $this->get('/');
 
         $response->assertStatus(200);
     }
