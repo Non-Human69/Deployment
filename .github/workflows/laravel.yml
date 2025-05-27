@@ -20,6 +20,8 @@ jobs:
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+    - name: Everything Docker
+      run: docker login
     - name: Run PHP_CodeSniffer (lint)
       run: vendor/bin/phpcs --standard=PSR12 app/ routes/ tests/
     - name: Generate key
