@@ -33,10 +33,16 @@ RUN php artisan key:generate || true
 # Expose the port Laravel will run on
 EXPOSE 8000
 
-# Create SQLite database file
+# Create SQLite DB file
 RUN mkdir -p /var/www/database && touch /var/www/database/database.sqlite
 
+# Ensure Laravel uses SQLite at build time
+ENV DB_CONNECTION=sqlite
+ENV DB_DATABASE=/var/www/database/database.sqlite
+
+# Clear config cache just to be safe
+RUN php artisan config:clear
+
 # Run migrations and seeders
-RUN php artisan config:clear && php artisan migrate --force && php artisan db:seed --force
-# Start Laravel server
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+RUN php artisan migrate --force && php artisan db:seed --force
+
