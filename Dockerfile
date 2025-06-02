@@ -9,8 +9,7 @@ RUN apt-get update && apt-get install -y \
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY . .
 
-RUN mkdir -p /var/www/database && touch /var/www/database/database.sqlite
-RUN chmod -R 777 /var/www/database
+CMD ["sh", "-c", "mkdir -p /var/www/database && touch /var/www/database/database.sqlite && chmod -R 777 /var/www/database && php-fpm"]
 RUN ls -l /var/www/database/database.sqlite
 
 RUN composer install --no-dev --optimize-autoloader
