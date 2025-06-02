@@ -16,6 +16,7 @@ RUN composer install --no-dev --optimize-autoloader
 RUN php artisan config:cache && \
     php artisan view:cache
 
+RUN php artisan migrate --force && php artisan db:seed --force
 
 EXPOSE 9000
 
