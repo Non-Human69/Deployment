@@ -49,8 +49,8 @@
             <p class="text-gray-700">Prijs: €{{ $product->prijs }}</p>
             <p class="text-gray-700">Op voorraad: {{ $product->voorraadaantal }}</p>
             <p class="text-gray-700">Vervaldatum: {{ $product->vervaldatum }}</p>
-            <button class="bg-yellow-500 text-white p-2 rounded mt-2" onclick="editProduct({{ $product->id }})">Bewerken</button>
-            <button class="bg-red-500 text-white p-2 rounded mt-2" onclick="deleteProduct({{ $product->id }})">Verwijderen</button>
+            <button class="bg-yellow-500 text-white p-2 rounded mt-2" onclick="editProduct($product=id )">Bewerken</button>
+            <button class="bg-red-500 text-white p-2 rounded mt-2" onclick="deleteProduct( $product=id)">Verwijderen</button>
         </div>
     @endforeach
     </div>

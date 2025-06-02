@@ -17,7 +17,6 @@
         "vite": "^6.0.11"
     },
     "dependencies": {
-        "@tailwindcss/vite": "^4.0.12",
-        "dos2unix": "^1.1.2"
+        "@tailwindcss/vite": "^4.0.12"
     }
 }

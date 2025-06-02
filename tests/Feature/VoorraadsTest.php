@@ -11,7 +11,7 @@ class VoorraadsTest extends TestCase
     /**
      * A basic feature test example.
      */
-    public function testProductExists(): void
+    public function test_example(): void
     {
         $response = $this->get('/');
 
