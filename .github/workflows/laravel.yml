@@ -30,9 +30,9 @@ jobs:
       run: mkdir -p /var/www
     - name: Create Database Manually
       run: |
-        mkdir -p /var/www/database
-        touch /var/www/database/database.sqlite
-        chmod -R 777 /var/www/database
+        sudo mkdir -p /var/www/database
+        sudo touch /var/www/database/database.sqlite
+        sudo chmod -R 777 /var/www/database
     - name: Verify Database File
       run: ls -l /var/www/database/database.sqlite
     - name: Run Migrations
