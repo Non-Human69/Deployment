@@ -33,5 +33,11 @@ RUN php artisan key:generate || true
 # Expose the port Laravel will run on
 EXPOSE 8000
 
-# Start Laravel development server
+# Create SQLite database file
+RUN mkdir -p /var/www/database && touch /var/www/database/database.sqlite
+
+# Run migrations and seeders
+RUN php artisan migrate --force && php artisan db:seed --force
+
+# Start Laravel server
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
