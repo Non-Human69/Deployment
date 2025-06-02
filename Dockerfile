@@ -46,3 +46,5 @@ RUN php artisan config:clear
 # Run migrations and seeders
 RUN php artisan migrate --force && php artisan db:seed --force
 
+# Start the Laravel development server
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
