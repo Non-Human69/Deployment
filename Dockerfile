@@ -37,7 +37,6 @@ EXPOSE 8000
 RUN mkdir -p /var/www/database && touch /var/www/database/database.sqlite
 
 # Run migrations and seeders
-RUN php artisan migrate --force && php artisan db:seed --force
-
+RUN php artisan config:clear && php artisan migrate --force && php artisan db:seed --force
 # Start Laravel server
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
