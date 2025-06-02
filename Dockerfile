@@ -11,6 +11,7 @@ COPY . .
 
 RUN mkdir -p /var/www/database && touch /var/www/database/database.sqlite
 RUN chmod -R 777 /var/www/database
+RUN ls -l /var/www/database/database.sqlite
 
 RUN composer install --no-dev --optimize-autoloader
 
