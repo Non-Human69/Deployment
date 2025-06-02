@@ -1,27 +1,37 @@
-FROM php:8.2-fpm
+FROM php:8.2-cli
 
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    zip \
+    libzip-dev \
+    curl \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    && docker-php-ext-install zip pdo pdo_mysql
+
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Set working directory
 WORKDIR /var/www
 
-RUN apt-get update && apt-get install -y \
-    git curl zip unzip libpng-dev libonig-dev libxml2-dev libzip-dev \
-    && docker-php-ext-install pdo_mysql mbstring zip exif pcntl
-
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+# Copy application files
 COPY . .
 
-# Create the database directory and file during the build process
-RUN mkdir -p /var/www/database && touch /var/www/database/database.sqlite && chmod -R 777 /var/www/database
+# Install Laravel dependencies
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
-# Verify the database file
-RUN ls -l /var/www/database/database.sqlite
+# Create Laravel .env file if it doesn't exist
+RUN cp .env.example .env || true
 
-RUN composer install --no-dev --optimize-autoloader
+# Generate application key
+RUN php artisan key:generate || true
 
-RUN php artisan config:cache && \
-    php artisan view:cache
+# Expose the port Laravel will run on
+EXPOSE 8000
 
-RUN php artisan migrate --force && php artisan db:seed --force
-
-EXPOSE 9000
-
-CMD ["php-fpm"]
+# Start Laravel development server
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
